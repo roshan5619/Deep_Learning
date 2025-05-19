@@ -88,15 +88,17 @@ At the end of training:
 
 ## 📈 Sample Plots
 
-![Loss Plot](plots/loss_curve_example.png)
+![Loss Plot]
 
 ---
 
 ## 🚀 How to Run
 
 1. Clone the repository:
+ ```
        git clone https://github.com/your-username/powerplant-ann-fromscratch.git
-       cd powerplant-ann-fromscratch 
+       cd powerplant-ann-fromscratch
+``` 
 2.Install dependencies:
  
       pip install numpy matplotlib
