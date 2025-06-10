@@ -1,4 +1,8 @@
 # 🚀 Spaceship Titanic - Passenger Transport Classification
+##  Objective
+To predict whether a passenger was **transported to an alternate dimension** during the collision of Spaceship Titanic with a spacetime anomaly. This analysis involves preprocessing, exploratory analysis, visualization, dimensionality reduction, and machine learning modeling.
+
+---
 
 ## 📄 Description of the Task
 - Explore and preprocess the data
@@ -32,24 +36,62 @@
 
 ## 🧠 Approach Followed
 
-1. **Preprocessing**
+## 1. **Preprocessing**
    - Dropped `PassengerId`, `Cabin`, and `Name`
    - Extracted the `Deck` from the `Cabin` column
    - Imputed missing numerical features using median, and categorical using mode
   
 
-2. **Exploratory Data Analysis**
-   - Bar plots to explore relationships between features and `Transported`
-   - Pie charts for transportation percentages across different `Deck`s
-   - Age distribution plotted
+## 2. **Exploratory Data Analysis (EDA)**
 
-3. **Dimensionality Reduction**
+### Insight 1: Transport Rate by HomePlanet
+| HomePlanet | Transport Rate |
+|------------|----------------|
+| Europa     | 65.88%         |
+| Mars       | 52.30%         |
+| Earth      | 42.39%         |
+
+**Conclusion:** Passengers from **Europa** had the highest chance of being transported.
+
+---
+
+### Insight 2: Impact of CryoSleep
+| CryoSleep | Transport Rate |
+|-----------|----------------|
+| True      | 81.76%         |
+| False     | 32.89%         |
+
+**Conclusion:** Passengers in **CryoSleep** were much more likely to be transported.
+
+---
+
+### Insight 3: VIP Status
+| VIP Status | Transport Rate |
+|------------|----------------|
+| False      | 50.63%         |
+| True       | 38.19%         |
+
+**Conclusion:** **Non-VIP** passengers had a higher transport rate.
+
+---
+
+### Insight 4: Deck-wise Transport Rate (with Pie Charts)
+Deck-wise transport percentages were visualized using pie charts.
+
+Example insights:
+- **Deck B** had the highest transport rate (~76%)
+- **Deck F** had the lowest (~28%)
+
+---
+
+## 3. **Dimensionality Reduction**
    - Used **PCA** to reduce feature space to 2D
-   - Visualized the 2D PCA space with color-coded classes
+   - The scatter plot indicated some separation between transported and non-transported clusters.
 
-4. **Modeling**
+## 4. **Modeling**
    - Still didn't finished.
 ---
+
 
 📌 Libraries Used
 
